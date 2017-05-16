@@ -1,0 +1,183 @@
+.popup-window{
+	margin: 0 auto;
+    padding: 20px 20px 10px;
+    position: absolute;
+    max-width: 500px;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    right: 0;
+    background: #E3DC2E;
+    background: linear-gradient(-135deg, transparent 4em, #E3DC2E 0)top right;
+    box-shadow: -13px 13px 24px -2px rgba(0,0,0,0.29);
+    z-index: 9999;
+    border-radius: 10px;
+    &__close{
+    	font-family: Roboto,serif;
+    	position: absolute;
+	    top: 5px;
+	    right: 5px;
+	    height: 20px;
+	    font-size: 35px;
+	    font-weight: 900;
+	    display: block;
+	    width: 30px;
+	    z-index: 99999;
+	    color: #F4511E;
+	    &:hover {
+	    cursor: pointer;
+	}
+    }
+	&-form{
+		margin: 10px auto;
+		text-align: right;
+		max-width: 100%;
+		width: 320px;
+		&__label{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			justify-content: space-between;
+			margin: 10px auto 20px;
+		    align-items: center;
+
+		}
+		&__input{
+				outline: none;
+				border: none;
+				width: 240px;
+				height: 40px;
+				font-size: 18px;
+				margin-right: 10px;
+				margin-left: 8px;
+				color: #512c04;
+	    	border: 2px solid #f8e8df;
+				padding: 5px 7px;
+				outline: none;
+				border: none;
+				background-color: #1DE9B6;
+				font-family: 'Bree Serif', serif;
+				&:focus ~ .arrow {
+			      opacity: 1;
+			      transform: translateX(0);
+			    }
+		    }
+		&__submit{
+		margin-right: 10px;
+		padding: 10px 30px;
+		opacity: 0.9;
+		background-color: #C9C330;
+	    color: #fff;
+	    font-size: 18px;
+	    border: none;
+	    transition: .5s;
+	    border-radius: 5px;
+	    font-family: 'Bree Serif', serif;
+	    &:hover{
+	    	background-color: #FF7043;
+		    transition: .5s;
+		    -webkit-transition: .5s;
+	    }
+		}
+	}
+	&-btn-fb{
+		margin: 0 auto 10px;
+		width: 200px;
+		height: 30px;
+		font-size: 16px;
+		border-radius: 5px;
+		color: white;
+		display: block;
+		font-family: 'Bree Serif', serif;
+		background-color: #607ac1;
+	}
+	&-btn-gl{
+		margin: 0 auto 10px;
+		width: 200px;
+		height: 30px;
+		font-size: 16px;
+		border-radius: 5px;
+		color: white;
+		display: block;
+		font-family: 'Bree Serif', serif;
+		background-color: #F44336;
+	}
+	&-btn-tw{
+		margin: 0 auto 10px;
+		height: 30px;
+		width: 200px;
+		font-size: 16px;
+		border-radius: 5px;
+		color: white;
+		display: block;
+		font-family: 'Bree Serif', serif;
+		background-color: #4099FF;
+	}
+}
+
+
+.popup-window-wrapper{
+	height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+}
+.arrow {
+  margin-left: 10px;
+  width: 2rem;
+  height: 2rem;
+  order: -1;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: .2s;
+  &__path {
+    fill: none;
+    stroke: #000;
+  }
+}
+.line {
+	position: absolute;
+	bottom: 0px;
+	right: 11px;
+  /*margin: 5px 0px 0px 50px;*/
+  width: 254px;
+  height: 2px;
+  fill: none;
+  stroke: #1DE9B6;
+}
+.line__focus {
+    stroke: #000;
+    opacity: 0;
+    stroke-dasharray: 0, 20;
+    stroke-dashoffset: -20;
+  }
+  &:focus ~ .line .line__focus {
+    opacity: 1;
+    stroke-dasharray: 40, 0;
+    stroke-dashoffset: 0;
+    transition: .2s;
+    }
+
+
+    .ng-dirty.ng-invalid ~ .line .line__focus {
+      stroke: red;
+    }
+    .ng-dirty.ng-valid ~ .line .line__focus {
+      stroke: green;
+    }
+
+::-webkit-input-placeholder {color: white;}
+::-moz-placeholder          {color:white;}/* Firefox 19+ */
+:-moz-placeholder           {color:white;}/* Firefox 18- */
+:-ms-input-placeholder      {color:white;}
+
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}

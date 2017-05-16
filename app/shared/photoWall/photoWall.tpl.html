@@ -1,0 +1,10 @@
+<div class='photoWall'>
+  <p>{{imageCtrl.users[id].displayName}}</p>
+  <div class="photoWall-container" ng-repeat='image in imageCtrl.images'>
+    <p ng-show="firebaseUser"><a ng-click="imageCtrl.removeImage(image.id)">X</a></p>
+    <img ng-src='{{image.data}}'>
+    <!--<p>{{imageCtrl.users[id].displayName}}</p>-->
+    <!--<p>{{image.user[id].displayName}}</p>-->
+    <!--<p>{{image.id}}</p>-->
+  </div>
+</div>

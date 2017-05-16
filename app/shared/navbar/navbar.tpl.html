@@ -1,0 +1,10 @@
+<navbar class="navbar">
+	<div class="navbar-wrapper">
+		<img class="navbar-wrapper-logo" src="./assets/img/navbar/logo.png">
+		<menu class="navbar-wrapper-menu">
+			<li class="navbar-wrapper-list" ng-hide="firebaseUser"><a class="navbar-wrapper-menu__link" ng-click="navCtrl.login($event)"  href="">Log in</a></li>
+			<li class="navbar-wrapper-list" ng-hide="firebaseUser"><a class="navbar-wrapper-menu__link" ng-click="navCtrl.signup($event)"  href="">Sign up</a></li>
+			<li class="navbar-wrapper-list" ng-show="firebaseUser">{{displayName}} | <a class="navbar-wrapper-menu__link" ng-click="navCtrl.signout()"  href="">Sign out</a></li>
+		</menu>
+	</div>
+</navbar>

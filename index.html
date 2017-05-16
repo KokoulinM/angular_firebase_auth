@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/build.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100&amp;subset=latin,cyrillic" rel="stylesheet"
+	type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/css/angular-ui-notification.css">
+</head>
+<body style="background-color: #FFCC80" ng-controller="notificationController">
+	<navbar-top></navbar-top>
+	<main rel="main" ui-view ng-show="firebaseUser"></main>
+	<popup></popup>
+	<registration></registration>
+	<photo-dir></photo-dir>
+	<script type="text/javascript" src="./assets/js/vendor.js"></script>
+	<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="popup-window-wrapper" hidden>
+	<div class="popup-window">
+	<div class="popup-window__close" ng-click="$emit('loginClick',{eventType: 'close'})">x</div>
+		<form class="popup-window-form" ng-submit="popupCtrl.submit()">
+			<label class="popup-window-form__label">
+				<input class="popup-window-form__input" placeholder="Email" type="text" required ng-model="popupCtrl.data.email">
+				<svg class="arrow" viewBox="0 0 20 20" preserveAspectRatio="none" width="1rem">
+	          		<path class="arrow__path" d="M0 0 L10 10 L 0 20"></path>
+	        	</svg>
+	        	<svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+          			<path d="M0 1 L40 1"></path>
+          			<path class="line__focus" d="M0 1 L40 1"></path>
+        		</svg>
+			</label>
+			<label class="popup-window-form__label">
+				<input class="popup-window-form__input" placeholder="Password" type="password" required ng-model="popupCtrl.data.password">
+				<svg class="arrow" viewBox="0 0 20 20" preserveAspectRatio="none" width="1rem">
+	          		<path class="arrow__path" d="M0 0 L10 10 L 0 20"></path>
+	        	</svg>
+	        	<svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none">
+          			<path d="M0 1 L40 1"></path>
+          			<path class="line__focus" d="M0 1 L40 1"></path>
+        		</svg>
+			</label>
+			<button class="popup-window-form__submit" type="submit">Log in</button>
+		</form>
+		<button class="popup-window-btn-gl" ng-click="popupCtrl.signInWith('google')">Log in with Google</button>
+		<button class="popup-window-btn-fb" ng-click="popupCtrl.signInWith('facebook')">Log in with Facebook</button>
+		<button class="popup-window-btn-tw" ng-click="popupCtrl.signInWith('twitter')">Log in with Twitter</button>
+	</div>
+</div>
